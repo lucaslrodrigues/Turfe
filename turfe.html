@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Turfe</title>
+</head>
+<body>
+    <!-- Quantidade de cavalos -->
+    <div id="window1" class="window1">
+
+        Quantidade de cavalos
+        <input type="text" id="mount_ipt">
+        <button onclick="save_mount()">Salvar</button><br>
+
+    </div>
+
+    <!-- Nome dos cavalos -->
+    <div id="window2" class="window2" style="display: none;">
+
+        Nome de cada cavalo
+        <input type="text" id="name_ipt">
+        <button id="button_save_name" onclick="save_name()">Salvar</button><br>
+        <button id="button_next_window" onclick="next_window()" style="display: none;">Continuar</button>
+    
+    </div>
+
+    <!-- Quantidade de voltas -->
+    <div id="window3" class="windiow3" style="display: none;">
+
+        Quantidade de voltas que o turfe terá
+        <input type="text" id="laps_ipt">
+        <button id="button_save_laps" onclick="save_laps()">Salvar</button>
+        <button id="button_next_window2" onclick="Next_window2()" style="display: none;">Dar a largada</button>
+    
+    </div>
+    <div id="window4" class="window4" style="display: none;">
+        <div class="podiun" id="podium">
+            [AQUI VAI O PODIO]
+        </div>
+        <span id="view_area"></span>
+
+    </div>
+</body>
+</html>
+<script>
+    var horse_mount = 0;
+    var horse_name = [];
+    var laps = 0;
+
+    function save_mount(){
+        let mount = (mount_ipt.value).trimStart();
+        if(mount.length == 0 || isNaN(Number(mount)) || Number(mount) <= 1){
+            alert('A quantidade de cavalos deve ser numerica maior do que 1');
+        }else{
+            horse_mount = Number(mount);
+            console.log("QUANTIDADE DE CAVALOS: "+ horse_mount)
+            window1.style.display = 'none';
+            window2.style.display = 'flex';
+        }
+    }
+    function save_name(){
+        if(horse_name.length < horse_mount){
+            var name = (name_ipt.value).trimStart();
+
+            console.log("NOME DO CAVALO: "+ name+"\nVETOR DE NOMES: " + horse_name)
+
+            if(name.length == 0){
+                alert('Insira um nome valido');
+            }else{
+                if(horse_name.length == 0){
+                    horse_name.push(name);
+                    name_ipt.value = '';
+                }else{
+                    let verify_name = true;
+                    for(let index = 0; index < horse_name.length; index ++){
+                        if(name == horse_name[index]){
+                            alert('Você já inseriu esse nome!!')
+                            verify_name = false;
+                        }
+                    }
+                    if(verify_name){
+                        horse_name.push(name);
+                        console.log('SALVANDO NOME: '+ name)
+                        name_ipt.value = '';
+                    }
+                }
+            }
+        }
+        if (horse_name.length == horse_mount) {
+            button_save_name.style.display = 'none';
+            name_ipt.style.display = 'none';
+            button_next_window.style.display = 'flex';
+        }
+    }
+
+    function next_window(){
+        window2.style.display = 'none';
+        window3.style.display = 'flex';
+    }
+
+    function save_laps(){
+        let lap = (laps_ipt.value).trimStart();
+        if(lap.length == 0 && isNaN(Number(lap)) || Number(lap) < 0){
+            alert('A quantidade de voltas deve ser numerica maior do que 0');
+        }else{
+            laps = Number(lap);
+            console.log('QUANTIDADE DE VOLTAS DA CORRIDA: '+laps)
+            button_save_laps.innerHTML = `Mudar`
+            button_next_window2.style.display = 'flex';
+        }
+    }
+
+    function Next_window2(){
+        window3.style.display = 'none'
+        window4.style.display = 'flex'
+    }
+
+    // Corrida
+    
+</script>
