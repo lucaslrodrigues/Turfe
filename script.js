@@ -145,7 +145,7 @@ function lap(){
     cont ++
     lap_number ++
     lap_view.innerHTML = lap_number
-    if(cont < laps){
+    if(cont <= laps){
         for(let index = 0; index < horse_mount; index ++){
             let time = Number((Math.random() * 2 + 7).toFixed(1))
             horses[index].tempo = time;
@@ -179,6 +179,11 @@ function lap(){
                 s_name.innerHTML = `${second.nome}`
             }
         }
+        if(second.tempo == first.tempo){
+            var sec_temp = second.tempo;
+            sec_tempo += 0.1
+            second.tempo = sec_tempo
+        }
         for(let i = 0; i < horse_mount; i ++){
             if(horses[i].tempoSum > first.tempo && horses[i].tempoSum > second.tempo){
                 third.tempo = horses[i].tempoSum
@@ -190,11 +195,11 @@ function lap(){
         winner = first.nome;
     }
     if(cont == laps){
-        for(let index = 0; index < horse_mount; index++){
-            view_area.innerHTML += `<br>CAVALO: ${horses[index].nome} -
-            TEMPO DA VOLTA: ${Number(horses[index].tempo).toFixed(1)} - TEMPO TOTAL: ${Number(horses[index].tempoSum).toFixed(1)}
-            `
-        }
+        // for(let index = 0; index < horse_mount; index++){
+        //     view_area.innerHTML += `<br>CAVALO: ${horses[index].nome} -
+        //     TEMPO DA VOLTA: ${Number(horses[index].tempo).toFixed(1)} - TEMPO TOTAL: ${Number(horses[index].tempoSum).toFixed(1)}
+        //     `
+        // }
         winner_span.innerHTML = `<img src="imgs/trofeu.png">`
         button_lap.style.display='none';
         view_winner.style.display = 'flex';
