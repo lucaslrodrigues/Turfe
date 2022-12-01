@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,500;1,600;1,700&display=swap');
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+.first_page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #F2F2F2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('imgs/corrida\ de\ cavalo.jpg');
+    background-size: cover;
+}
+.first_page .content{
+    width: 60%;
+    height: 45%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #53593cd0;
+    border-radius: 10px;
+    border: solid white 3px;
+}
+.first_page .title_content{
+    
+}
+.first_page .title{
+    margin-top: 5%;
+    font-size: 30pt;
+    font-weight: 700;
+    background-color: #435159;
+    padding: 20px;
+    border-radius: 30px;
+}
+.first_page .content .subtitle{
+    font-size: 17pt;
+}
+.first_page .content button{
+    font-family: 'Poppins', sans-serif;
+    border-radius: 10px;
+    background-color: transparent;
+    border: white solid 3px;
+    color: white;
+    padding: 15px;
+    font-size: 15pt;
+
+}
+.first_page .content button:hover{
+    background-color: #D9C589;
+    color: black;
+}
+
+/* tela 1 */
+.window1{
+    width: 100%;
+    height: 100%;
+}
+.window1 .content{
+    width: 60%;
+    height: 100%;
+    background-color: #53593C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.window1 .img{
+    width: 40%;
+    background: linear-gradient(rgba(0, 0, 0, 0.222), rgba(0, 0, 0, 0.197)), url('imgs/puxandoCavalo.jpg');
+    background-size: cover;
+}
+
+.window1 .content .content_items{
+    height: 40%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: #435159; */
+    border: white solid 3px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.309);
+}
+
+.window1 .content .content_items span{
+    font-size: 25pt;
+    margin-top: 2%;
+    color: white;
+}
+
+.window1 .content .content_items button{
+    padding: 5px 15px;
+    font-size: 15px;
+    font-family: 'poppins', sans-serif;
+    border-radius: 10px;
+    background-color: transparent;
+    border: white solid 3px;
+    color: white;
+}
+.window1 .content .content_items button:hover{
+    background-color: #D9C589;
+    color: black;
+}
+
+.window1 .content .content_items input{
+    background-color: transparent;
+    outline: 0;
+    border: none;
+    padding: 5px;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 20pt;
+}
+
+.window2{
+    width: 100%;
+    height: 100%;
+}
+.window2 .content{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #D9C589;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.window2 .img{
+    width: 40%;
+    background: linear-gradient(rgba(0, 0, 0, 0.222), rgba(0, 0, 0, 0.197)), url('imgs/cavaloCorrendo.jpg');
+    background-size: cover;
+}
+
+.window2 .content .content_items{
+    height: 30%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    /* border: #435159 solid 3px; */
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.309);
+}
+.window2 .content .content_items span{
+    font-size: 25pt;
+    margin-top: 2%;
+    color: #435159;
+}
+
+.window2 .content .content_items button{
+    padding: 5px 15px;
+    font-size: 15px;
+    font-family: 'poppins', sans-serif;
+    border-radius: 10px;
+    background-color: transparent;
+    border: #435159 solid 3px;
+    color: #435159;
+}
+.window2 .content .content_items button:hover{
+    background-color: #435159;
+    color: black;
+}
+
+.window2 .content .content_items input{
+    background-color: transparent;
+    outline: 0;
+    border: none;
+    padding: 5px;
+    border-bottom: 2px solid #435159;
+    color: #435159;
+    font-size: 20pt;
+}
+.window2 .content #horse_names_view{
+    width: 60%;
+    height: 56%;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.309);
+}
+#names_view{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15pt;
+}
+
+/* Tela 3 */
+
+.window3{
+    width: 100%;
+    height: 100%;
+}
+.window3 .content{
+    width: 60%;
+    height: 100%;
+    background-color: #53593C;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.window3 .img{
+    width: 40%;
+    background: linear-gradient(rgba(0, 0, 0, 0.222), rgba(0, 0, 0, 0.197)), url('imgs/cavalos\ correndo\ desenhado.jpg');
+    background-size: cover;
+}
+
+.window3 .content .content_items{
+    height: 40%;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* background-color: #435159; */
+    border: white solid 3px;
+    border-radius: 10px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.309);
+}
+
+.window3 .content .content_items span{
+    font-size: 17pt;
+    margin-top: 2%;
+    color: white;
+}
+
+.window3 .content .content_items button{
+    padding: 5px 15px;
+    font-size: 15px;
+    font-family: 'poppins', sans-serif;
+    border-radius: 10px;
+    background-color: transparent;
+    border: white solid 3px;
+    color: white;
+}
+.window3 .content .content_items button:hover{
+    background-color: #D9C589;
+    color: black;
+}
+
+.window3 .content .content_items input{
+    background-color: transparent;
+    outline: 0;
+    border: none;
+    padding: 5px;
+    border-bottom: 2px solid white;
+    color: white;
+    font-size: 20pt;
+}
+
+/* Tela do jogo */
+
+.window4{
+    width: 100%;
+    height: 100%;
+}
+.window4 .podium{
+    width: 80%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.window4 .podium .content_podium_box{
+    width: 70%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+    background-color: #53593C;
+    border-radius: 30px;
+}
+
+.window4 .podium .content_podium_box .podium_items{
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    background-color: #435159;
+    border: solid 3px white;
+    border-radius: 15px;
+    height: 60%;
+    width: 270px;
+}
+
+.window4 .podium .content_podium_box img{
+    width: 60px;
+}
+
+.window4 .podium .content_lap{
+    max-height: 400px;
+    overflow: auto;
+    border-radius: 30px 30px 0px 0px;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #435159;
+    color: white;
+    font-size: 9pt;
+}
+/* .window4 .podium .content_podium_box .second_style{
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+} */
+
+/* 
+.window4 .podium .content_podium_box #second_name{
+    width: 100%;
+    height: 40%;
+    background-color: yellow;
+}
+
+.second_image{
+    width: 100%;
+    height: 60%;
+}
+
+.second_style{
+width: 100%;
+height: 100%;
+}
+
+#first_name{
+    width: 100%;
+    height: 60%;
+    background-color: rgb(147, 147, 17);
+} */
+
+.second_style{
+    display: flex;
+    flex-direction: column;
+}
+
+#second_name{
+    background-color: rgb(250, 250, 32);
+    max-width: 100%;
+    height: 55px;
+    color: #435159;
+}
+.second_image{
+    width: 100%;
+    height: 65%;
+}
+
+.first_style{
+    display: flex;
+    flex-direction: column;
+}
+
+#first_name{
+    background-color: rgb(176, 176, 13);
+    max-width: 100%;
+    height: 90px;
+    color: #435159;
+}
+.first_image{
+    width: 100%;
+    height: 65%;
+}
+
+.third_style{
+    display: flex;
+    flex-direction: column;
+}
+
+#third_name{
+    background-color: rgb(160, 160, 47);
+    max-width: 100%;
+    height: 30px;
+    color: #435159;
+}
+.third_image{
+    width: 100%;
+    height: 65%;
+}
+
+.window4 .podium .content_podium_box .podium_items span{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    color: rgb(22, 2, 2);
+}
+
+.window4 .podium .content_podium_box button{
+    padding: 5px 15px;
+    font-size: 15px;
+    font-family: 'poppins', sans-serif;
+    border-radius: 10px;
+    background-color: #D9C589;
+    border: #53593C solid 3px;
+    color: black;
+    margin-top: 5%;
+}
+
+.window4 .podium .content_podium_box button:hover{
+    background-color: #D9C589;
+    color: black;
+    border: solid 3px white;
+}

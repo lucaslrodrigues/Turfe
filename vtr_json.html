@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TESTE</title>
+</head>
+<body>
+    <p>
+        <button onclick="atualizar()">VETOR DE JSON</button><br>
+        <span id="view_area"></span>
+    </p>
+</body>
+</html>
+<script>
+    var a = [];
+    var j = {
+        livro : 1,
+        aula: "a"
+    }
+    function atualizar(){
+        // for(let i = 0; i < 5; i ++){
+        //     a.push(
+ 
+        //     )
+        // }
+        console.log(j.aula)
+        view_area.innerHTML = `${j.aula}`
+
+        j.aula += ' b'
+        console.log(j.aula)
+        view_area.innerHTML += `${j.aula}`
+
+        console.log(j.livro)
+        view_area.innerHTML = `${j.livro}`
+
+        j.livro += 1
+
+        console.log(j.livro)
+        view_area.innerHTML = `${j.livro}`
+
+        a.push(
+            {
+                teste: 19
+            }
+
+        )
+
+        console.log(a[0].teste)
+    }
+</script>
