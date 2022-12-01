@@ -103,7 +103,7 @@ function next_window(){
 // QUANTIDADE DE VOLTAS
 function save_laps(){
     let lap = (laps_ipt.value).trimStart();
-    if(lap.length == 0 || isNaN(Number(lap)) || Number(lap) < 0){
+    if(lap.length == 0 || isNaN(Number(lap)) || Number(lap) <= 0){
         alert('A quantidade de voltas deve ser numerica maior do que 0');
         laps_ipt.value = '';
     }else{
@@ -141,7 +141,7 @@ function lap(){
         tempo: 999,
         nome: 'Undefined'
     };
-
+    var ultimo = 0;
     cont ++
     lap_number ++
     lap_view.innerHTML = lap_number
@@ -162,6 +162,7 @@ function lap(){
             view_area.innerHTML += `<br>CAVALO: ${horses[index].nome} -
                 TEMPO DA VOLTA: ${Number(horses[index].tempo).toFixed(1)} - TEMPO TOTAL: ${Number(horses[index].tempoSum).toFixed(1)}
             `
+            ultimo = index;
         }
         view_area.innerHTML += `<br> -----------------------------------------------------------------------------------------------------------<br>`
         for(let i = 0; i < horse_mount; i ++){
@@ -189,6 +190,11 @@ function lap(){
         winner = first.nome;
     }
     if(cont == laps){
+        for(let index = 0; index < horse_mount; index++){
+            view_area.innerHTML += `<br>CAVALO: ${horses[ultimo].nome} -
+            TEMPO DA VOLTA: ${Number(horses[ultimo].tempo).toFixed(1)} - TEMPO TOTAL: ${Number(horses[ultimo].tempoSum).toFixed(1)}
+            `
+        }
         winner_span.innerHTML = `<img src="imgs/trofeu.png">`
         button_lap.style.display='none';
         view_winner.style.display = 'flex';
