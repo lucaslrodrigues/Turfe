@@ -181,7 +181,7 @@ function lap(){
         }
         if(second.tempo == first.tempo){
             var sec_temp = second.tempo;
-            sec_tempo += 0.1
+            Number(sec_tempo) += 0.1
             second.tempo = sec_tempo
         }
         for(let i = 0; i < horse_mount; i ++){
