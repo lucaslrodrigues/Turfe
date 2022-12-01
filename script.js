@@ -103,8 +103,8 @@ function next_window(){
 // QUANTIDADE DE VOLTAS
 function save_laps(){
     let lap = (laps_ipt.value).trimStart();
-    if(lap.length == 0 || isNaN(Number(lap)) || Number(lap) <= 0){
-        alert('A quantidade de voltas deve ser numerica maior do que 0');
+    if(lap.length == 0 || isNaN(Number(lap)) || Number(lap) <= 2){
+        alert('A quantidade de voltas deve ser numerica maior do que 3');
         laps_ipt.value = '';
     }else{
         laps = Number(lap);
