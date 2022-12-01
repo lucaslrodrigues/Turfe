@@ -191,8 +191,8 @@ function lap(){
     }
     if(cont == laps){
         for(let index = 0; index < horse_mount; index++){
-            view_area.innerHTML += `<br>CAVALO: ${horses[ultimo].nome} -
-            TEMPO DA VOLTA: ${Number(horses[ultimo].tempo).toFixed(1)} - TEMPO TOTAL: ${Number(horses[ultimo].tempoSum).toFixed(1)}
+            view_area.innerHTML += `<br>CAVALO: ${horses[index].nome} -
+            TEMPO DA VOLTA: ${Number(horses[index].tempo).toFixed(1)} - TEMPO TOTAL: ${Number(horses[index].tempoSum).toFixed(1)}
             `
         }
         winner_span.innerHTML = `<img src="imgs/trofeu.png">`
